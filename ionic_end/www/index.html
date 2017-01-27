@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>Pod_Scheduler</title>
 
     <link rel="manifest" href="manifest.json">
 
@@ -37,12 +37,18 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Pod_Scheduler</h1>
       </ion-header-bar>
       <ion-content>
-        <ul class="list" ng-controller="UsersController">
+        <!-- <ul class="list" ng-controller="UsersController">
           <li class="item" ng-repeat="user in users">
             {{user.name}}
+          </li>
+        </ul> -->
+        <ul class="list" ng-controller="PodcastsController">
+          <li class="item" ng-repeat="podcast in podcasts">
+            {{podcast.title}}</br>
+            <a href="http://{{podcast.link}}">Link</a>
           </li>
         </ul>
       </ion-content>

@@ -8,3 +8,6 @@
 User.create(name: 'Lauren', email: 'test1@podcast.test')
 User.create(name: 'Joy', email: 'test2@podcast.test')
 User.create(name: 'Jon', email: 'test3@podcast.test')
+
+Podcast.create(title: 'Joe Rogan', link: 'joerogan.net')
+Podcast.create(title: 'Nerdist', link: 'nerdist.com')

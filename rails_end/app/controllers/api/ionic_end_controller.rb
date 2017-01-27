@@ -8,7 +8,8 @@ module Api
     respond_to? :json
 
     def all
-      render json: User.all
+      # render json: User.all,
+      render json: Podcast.all
     end
 
     def default_serializer_options
