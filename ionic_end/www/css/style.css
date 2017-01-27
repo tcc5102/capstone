@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+.ion-android-contract {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-top: 7px;
+}
