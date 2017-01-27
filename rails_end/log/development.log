@@ -1,0 +1,668 @@
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170127140837)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170127140837"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-27 14:08:58 UTC], ["updated_at", 2017-01-27 14:08:58 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lauren"], ["email", "test1@podcast.test"], ["created_at", 2017-01-27 14:10:38 UTC], ["updated_at", 2017-01-27 14:10:38 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lauren"], ["email", "test1@podcast.test"], ["created_at", 2017-01-27 14:11:01 UTC], ["updated_at", 2017-01-27 14:11:01 UTC]]
+  [1m[35m (439.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joy"], ["email", "test2@podcast.test"], ["created_at", 2017-01-27 14:11:02 UTC], ["updated_at", 2017-01-27 14:11:02 UTC]]
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jon"], ["email", "test3@podcast.test"], ["created_at", 2017-01-27 14:11:02 UTC], ["updated_at", 2017-01-27 14:11:02 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lauren"], ["email", "test1@podcast.test"], ["created_at", 2017-01-27 14:11:45 UTC], ["updated_at", 2017-01-27 14:11:45 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joy"], ["email", "test2@podcast.test"], ["created_at", 2017-01-27 14:11:45 UTC], ["updated_at", 2017-01-27 14:11:45 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jon"], ["email", "test3@podcast.test"], ["created_at", 2017-01-27 14:11:45 UTC], ["updated_at", 2017-01-27 14:11:45 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170127140837')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-27 14:12:02 UTC], ["updated_at", 2017-01-27 14:12:02 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170127140837')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-27 14:12:02 UTC], ["updated_at", 2017-01-27 14:12:02 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lauren"], ["email", "test1@podcast.test"], ["created_at", 2017-01-27 14:12:02 UTC], ["updated_at", 2017-01-27 14:12:02 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joy"], ["email", "test2@podcast.test"], ["created_at", 2017-01-27 14:12:02 UTC], ["updated_at", 2017-01-27 14:12:02 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jon"], ["email", "test3@podcast.test"], ["created_at", 2017-01-27 14:12:02 UTC], ["updated_at", 2017-01-27 14:12:02 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/" for ::1 at 2017-01-27 09:22:09 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 48ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/people" for ::1 at 2017-01-27 09:23:05 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/people"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (46.7ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.5ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (244.9ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/" for ::1 at 2017-01-27 10:09:53 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 114ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/people" for ::1 at 2017-01-27 10:09:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/people"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (94.2ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (269.2ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:10:10 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.4ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.9ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:12:36 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.3ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.8ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/users" for ::1 at 2017-01-27 10:12:50 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (16.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.9ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (88.0ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (206.8ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/people" for ::1 at 2017-01-27 10:13:53 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/people"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.3ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.7ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:14:47 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.6ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.3ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:14:55 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.3ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.2ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:15:07 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:15:12 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.2ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.8ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/users" for ::1 at 2017-01-27 10:17:06 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.8ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.8ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.2ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:17:08 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:4:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:2:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/users" for ::1 at 2017-01-27 10:19:09 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:8:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:6:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:5:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (2.5ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.9ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:19:11 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:8:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:6:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:5:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.4ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.4ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/api/users" for ::1 at 2017-01-27 10:19:49 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (uninitialized constant ActionController::Api):
+  
+app/controllers/api/ionic_end_controller.rb:1:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (2.7ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.8ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (156.1ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:20:10 -0500
+Started GET "/api/users" for ::1 at 2017-01-27 10:20:20 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:8:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:6:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:5:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.4ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.7ms)
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:8:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:6:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:5:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.0ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:21:00 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::IonicEndController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/ionic_end_controller.rb:8:in `<class:IonicEndController>'
+app/controllers/api/ionic_end_controller.rb:6:in `<module:Api>'
+app/controllers/api/ionic_end_controller.rb:5:in `<top (required)>'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.2ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:21:25 -0500
+Processing by Api::IonicEndController#all as HTML
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.1ms)
+Completed 200 OK in 79ms (Views: 62.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/people" for ::1 at 2017-01-27 10:21:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/people"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (2.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.7ms)
+Started GET "/api/people" for ::1 at 2017-01-27 10:21:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/people"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.1ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.7ms)
+Started GET "/api/users" for ::1 at 2017-01-27 10:23:00 -0500
+Processing by Api::IonicEndController#all as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from build_middleware at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/stack.rb:130)
+Started GET "/" for ::1 at 2017-01-27 10:31:40 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/activerecord-5.0.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (15.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tylercooper/.rvm/gems/ruby-2.3.3@global/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 78ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users" for ::1 at 2017-01-27 10:31:47 -0500
+Processing by Api::IonicEndController#all as HTML
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 77ms (Views: 48.0ms | ActiveRecord: 23.8ms)
+
+
