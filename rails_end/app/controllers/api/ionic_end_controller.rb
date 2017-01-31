@@ -5,7 +5,7 @@
 module Api
   class Api::IonicEndController < ApplicationController
 
-    respond_to? :json
+    respond_to :json
 
     def all
       # render json: User.all,
